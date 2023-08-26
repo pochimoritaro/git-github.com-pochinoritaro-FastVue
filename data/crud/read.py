@@ -15,11 +15,11 @@ def read_userdata(id):
 
 def read_schedule(schedule_id):
     schedule_member = session.query(
-        	ScheduleUser.user_id, User.user_name).filter(
+        ScheduleUser.user_id, User.user_name).filter(
 
 				ScheduleUser.schedule_id == schedule_id,
                 ScheduleUser.user_id == User.user_id).all()
- 
+
     
     print(schedule_member)
         
